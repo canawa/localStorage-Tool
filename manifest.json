@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "LocalStorage Tool",
   "version": "1.0.0",
+  "id": "localstorage-tool",
   "description": "Professional localStorage viewer and manager for developers",
   "permissions": [
     "activeTab",

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "LocalStorage Tool",
+  "version": "1.0.0",
+  "description": "Professional localStorage viewer and manager for developers",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LocalStorage Tool"
+  }
+}
+  

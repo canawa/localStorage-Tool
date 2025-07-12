@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LOCALSTORAGE TOOL</h1>
+            <div class="url-info">
+                <span id="current-url">Loading...</span>
+            </div>
+            <div class="github-link">
+                <a href="https://github.com/canawa" target="_blank" title="Developer GitHub">
+                    <span>by @canawa</span>
+                </a>
+            </div>
+        </header>
+        
+        <div class="controls">
+            <button id="refresh-btn" class="btn primary">Refresh</button>
+            <button id="copy-all-btn" class="btn secondary">Copy All</button>
+            <button id="export-json-btn" class="btn secondary">Export JSON</button>
+            <button id="clear-btn" class="btn danger">Clear All</button>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search keys and values...">
+            <select id="filter-type" class="filter-select">
+                <option value="all">All Types</option>
+                <option value="string">Strings</option>
+                <option value="json">JSON</option>
+                <option value="number">Numbers</option>
+                <option value="boolean">Booleans</option>
+            </select>
+        </div>
+        
+        <div class="content">
+            <div id="loading" class="loading">LOADING LOCALSTORAGE...</div>
+            <div id="empty-state" class="empty-state hidden">
+                <p>LOCALSTORAGE IS EMPTY</p>
+            </div>
+            <div id="localStorage-content" class="localStorage-content hidden">
+                            <div class="table-header">
+                <span>FOUND: <span id="items-count">0</span> ITEMS</span>
+            </div>
+                <table id="localStorage-table">
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Type</th>
+                            <th>Value</th>
+                            <th>Size</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="localStorage-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <span>Made with ❤️ by</span>
+                <a href="https://github.com/canawa" target="_blank" class="footer-link">
+                    @canawa
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html> 
